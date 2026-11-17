@@ -1,0 +1,5 @@
+Intérêt du sujet : Un analyste crédit doit décider d'accepter ou de refuser un prêt. Refuser un bon client fait perdre des intérêts, accepter un mauvais risque fait perdre du capital : un modèle de scoring aide à prendre cette décision de façon cohérente.
+Problématique : À partir des caractéristiques d'un client et de son prêt, une régression logistique détecte-t-elle les mauvais risques mieux qu'une règle naïve, et quel seuil de décision minimise le coût lorsque accepter un mauvais risque coûte 5 fois plus que refuser un bon client ?
+Objectif mesurable : Métrique principale : AUC en validation croisée stratifiée à 5 plis. Référence : classifieur naïf (classe majoritaire, AUC = 0,5). Jeu de test : 30 % des clients, utilisé une seule fois. Seuil de réussite : [AUC ≥ 0,70 sur le test et coût total au seuil optimal inférieur d'au moins 20 % au coût obtenu au seuil de 0,5].
+Nature du problème : Classification binaire (0 = bon risque, 1 = mauvais risque), classes déséquilibrées (environ 70 % / 30 %) et coûts d'erreur asymétriques.
+Algorithme principal envisagé : n° 8, régression logistique.
